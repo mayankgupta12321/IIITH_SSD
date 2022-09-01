@@ -1,0 +1,24 @@
+DELIMITER $$
+CREATE PROCEDURE get_names_by_details ()
+BEGIN
+	
+	DECLARE CUST_NAME VARCHAR(40);
+    DECLARE CUST_CITY varchar(35);
+	DECLARE CUST_COUNTRY varchar(20);
+	DECLARE GRADE decimal(10,0);
+    DECLARE isCompleted INT DEFAULT 0;
+    
+	DECLARE cursorName CURSOR FOR SELECT customer.CUST_NAME, customer.CUST_CITY, customer.CUST_COUNTRY, customer.GRADE FROM customer;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET isCompleted = 1;
+    
+	OPEN cursorName; 
+    GETLIST: LOOP
+		FETCH cursorName INTO CUST_NAME, CUST_CITY, CUST_COUNTRY, GRADE;
+        IF isCompleted = 1 THEN
+        LEAVE GETLIST;
+        END IF;
+        SELECT CUST_NAME, CUST_CITY, CUST_COUNTRY, GRADE;
+    END LOOP GETLIST;
+    CLOSE cursorName; 
+END$$ 
+DELIMITER ;

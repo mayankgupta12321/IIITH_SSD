@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE PROCEDURE get_names_by_city (
+	IN WORKING_AREA varchar(35)
+)
+BEGIN
+	SELECT * FROM customer where customer.WORKING_AREA = WORKING_AREA;
+END$$
+DELIMITER ;
