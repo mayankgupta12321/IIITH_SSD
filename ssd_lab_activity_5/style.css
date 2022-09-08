@@ -1,0 +1,71 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, rgb(175, 244, 232) 16%, rgb(151, 185, 234) 100%);
+}
+
+h1 {
+  padding-top: 120px;
+  padding-left: 40%;
+}
+
+#inputForm2 {
+  padding-top: 100px;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px #888888;
+  border-radius : 50px;
+}
+
+#username:hover{
+  border: 2px solid rgb(36, 33, 33);
+}
+
+#password:hover{
+  border: 2px solid rgb(36, 33, 33);
+}
+
+#loginButton {
+  background-color: rgb(141, 179, 141);
+}
+
+#addRecord {
+  background-color: rgb(66, 152, 66);
+}
+
+#deleteRecord {
+  background-color: rgb(207, 72, 72);
+}
+
+#inputForm3 {
+  margin: auto;
+  text-align: center;
+}
+
+#inputForm4 {
+  padding-left: 150px;
+   text-align: center; 
+}
+
+#inputForm4 {
+  margin-top: 30px;
+  width: 300px;
+  margin: auto;
+
+  align-items: center;
+  /* text-align: center; */
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px #888888;
+  border-radius : 10px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

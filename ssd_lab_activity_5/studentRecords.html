@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student's Record</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function addRecord() {
+            var rollno = document.getElementById("rollno").value;
+            var name = document.getElementById("name").value;
+            var tablename = document.getElementById("studentRecord");
+
+            rollno = rollno.trim();
+            name = name.trim();
+
+            if (rollno != "" || name != "") {
+                // Add New Row in the Last
+                var addRow = tablename.insertRow(-1);
+                var AddColumnRollNo = addRow.insertCell(0);
+                AddColumnRollNo.innerText = rollno;
+
+                var AddColumnName = addRow.insertCell(1);
+                AddColumnName.innerText = name;
+            }
+
+
+            document.getElementById("rollno").value = "";
+            document.getElementById("name").value = "";
+
+        }
+
+        function deleteRecord() {
+            var tablename = document.getElementById("studentRecord");
+
+            // This condition is to prevent header deletion
+            if (tablename.rows.length > 1) tablename.deleteRow(-1);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Student Records</h1>
+    <div id="inputForm3">
+        <input type="text" id="rollno" placeholder="Roll No.">
+        <input type="text" id="name" placeholder="Name">
+        <button id='addRecord' onclick="addRecord()">Add New</button>
+    </div>
+    <br/>
+    <br/>
+    <center>
+        <div id = "inputForm4">
+            <table id="studentRecord">
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <br/>
+        <button id='deleteRecord' onclick="deleteRecord()">Delete Last Entry</button>
+    </center>
+    
+    
+
+    
+</body>
+
+</html>
