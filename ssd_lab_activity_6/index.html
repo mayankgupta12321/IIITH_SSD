@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Form</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <h1 id="teamForm">Team Form</h1>
+    <form name="myForm" onsubmit="submitForm()">
+        <table>
+            <tr>
+                <td>
+                    <label for="mname">Manager Name</label><br>
+                </td>
+                <td>
+                    <input type="text" id="mname" name="mname" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gemail">Group Email</label><br>
+                </td>
+                <td>
+                    <input onkeyup="ValidateEmail()" type="text" id="gemail" name="gemail" required >
+                </td>
+                <td>
+                    <p id = "gemailalert"></p>
+                </td>
+            </tr>
+            <tr id = "unamerow">
+                <td>
+                    <label for="uname">Server Username</label><br>
+                </td>
+                <td>
+                    <input onkeyup="ValidateUserName()"type="text" id="uname" name="uname" required>
+                </td>
+                <td>
+                    <p id = "unamealert"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="spassword">Server Password</label><br>
+                </td>
+                <td>
+                    <input type="password" id="spassword" name="spassword" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="cpassword">Confirm Password</label><br>
+                </td>
+                <td>
+                    <input onkeyup="ValidatePassword()" type="password" id="cpassword" name="cpassword" required>
+                </td>
+                <td>
+                    <p id = "passwordalert"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tlead">Team Lead</label><br>
+                </td>
+                <td>
+                    <select name="tlead" id="tlead" required>
+                        <option value="tlead1">Mayank</option>
+                        <option value="tlead2">Ayush</option>
+                        <option value="tlead3">Ritvik</option>
+                        <option value="tlead4">Santanu</option>
+                        <option value="tlead5">Ardhendu</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tlead">Team Lead</label><br>
+                </td>
+                <td>
+                    <table id = "table1">
+                        <tr id = "ele1">
+                            <td>
+                                <p>
+                                    Mayank
+                                </p>
+                            </td>
+                        </tr>
+                        <tr id = "ele2">
+                            <td>
+                                <p>
+                                    Ardhendu
+                                </p>
+                            </td>
+                        </tr>
+                        <tr id = "ele3">
+                            <td>
+                                <p>
+                                    Santanu
+                                </p>
+                            </td>
+                        </tr>
+                        <tr id = "ele4">
+                            <td>
+                                <p>
+                                    Ayusj
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table id = "table2">
+                        <tr id = "ele5">
+                            <td>
+                                <p>
+                                    Mayank
+                                </p>
+                            </td>
+                        </tr>
+                        <tr id = "ele6">
+                            <td>
+                                <p>
+                                    Ardhendu
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <input type = "submit" value="Submit">
+    </form>
+
+    <!-- <div id="inputForm1">
+        <div id=inputForm2>
+            <span><b>Username</b></span>
+            <br />
+            <input type="text" id="username">
+            <br /> <br />
+            <span><b>Password</b></span>
+            <br /><input type="password" id="password">
+            <br /> <br />
+            <button id='loginButton' onclick="location.href = './studentRecords.html';">Login</button>
+        </div>
+    </div> -->
+</body>
+
+</html>
